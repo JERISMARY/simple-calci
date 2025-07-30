@@ -1,0 +1,21 @@
+body{
+    background-color: antiquewhite;
+    margin:0;
+}
+div{
+    align-items: center;
+
+}
+
+.box{
+    background-color: bisque;
+    height: fit-content;
+    width: fit-content;
+   
+    padding: 2vh;
+
+}
+button{
+    height: 12vh;
+    width: 9vw;
+}
