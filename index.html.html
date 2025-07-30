@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calci.css">
+    <title style="font-family: cursive;">calculator</title>
+</head>
+<body >
+<h1 style="text-align:center;"> <a href="calci.html" style="text-decoration: none;color: rgba(33, 36, 36, 0.781);  font-size:5vw; font-style:italic; font-family:cursive ">calculator</a></h1>
+
+    <center>
+        <div class="box" >
+    <input  style="padding:2vh; width: 30vw;" type="text" id="display"  >
+    <br>
+    <br>
+    <div style="display: inline-block; padding: 1vh;">
+        <button  onclick="append('1')">1</button>
+        <button  onclick="append('2')">2</button>
+        <button  onclick="append('3')">3</button>
+        <button  onclick="append('+')">+</button>
+        
+    </div>
+    <br>
+    <div style="display: inline-block; padding: 1vh;">
+        <button onclick="append('4')">4</button>
+        <button onclick="append('5')">5</button>
+        <button onclick="append('6')">6</button>
+        <button  onclick="append('-')">-</button>
+        
+    </div>
+    <br>
+    <div style="display: inline-block; padding: 2vh 2vw;">
+        <button  onclick="append('7')">7</button>
+        <button  onclick="append('8')">8</button>
+        <button  onclick="append('9')">9</button>
+        <button onclick="append('*')">x</button>
+        
+    </div>
+    <br>
+    <div style="display: inline-block; padding: 1vh;">
+        <button  onclick="clearDisplay()"> c </button>
+        <button  onclick="append('0')">0</button>
+        <button onclick="append('/')">/</button>
+        <button  onclick=calculate()>=</button>
+
+    </div>
+        </div>
+    </center>
+
+
+    <script>
+        function append (value){
+            document.getElementById("display").value+=value;
+        }
+
+        function clearDisplay() {
+            document.getElementById("display").value = " ";
+        }
+        function calculate (){
+            try{
+                document.getElementById("display").value=eval(document.getElementById("display").value)
+            }
+            catch(error)
+                {
+                    document.getElementById("display").value="error";
+            }
+        }
+        
+    </script>
+</body>
+</html>
